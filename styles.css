@@ -14,7 +14,7 @@ html body {
   background-color: transparent !important;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .navbar .navbar-nav {
   text-align: center;
@@ -46,6 +46,31 @@ html body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.carousel .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  font-size: 2rem;
+  opacity: 0.5;
+  text-align: center !important;
+  color: #e0e0e0 !important;
+}
+.carousel .cta-mobile {
+  text-decoration: none;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  background-color: dodgerblue;
+  border-radius: 0.25rem;
+  color: #e0e0e0;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
 .carousel .carousel-inner .carousel-item:before {
   content: "";
   position: absolute;
@@ -83,6 +108,19 @@ html body {
   }
   .carousel img {
     height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .overlay {
+    display: none;
+  }
+  .cta-mobile {
+    display: none;
+  }
+}
+@media (max-width: 472px) {
+  .logo {
+    display: none;
   }
 }
 @media (max-width: 991px) {
