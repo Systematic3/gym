@@ -59,7 +59,7 @@ html {
 
 .carousel {
 
-    .overlay {
+    .text-overlay {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -138,7 +138,7 @@ html {
 }
 
 @media (min-width: 768px) {
-    .overlay {
+    .text-overlay {
         display: none;
     }
     
